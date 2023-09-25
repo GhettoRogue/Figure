@@ -1,10 +1,10 @@
 ﻿namespace Figure.app;
 
-public abstract class Circle : Figure
+public class Circle : Figure
 {
     private readonly double radius;
 
-    protected Circle(double radius)
+    public Circle(double radius)
     {
         this.radius = radius;
     }
