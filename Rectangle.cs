@@ -2,17 +2,9 @@
 
 public class Rectangle : Figure
 {
-    private readonly double length;
-    private readonly double width;
+    public double Length { get; init; }
+    public double Width { get; init; }
 
-    public Rectangle(double length, double width)
-    {
-        this.length = length;
-        this.width = width;
-    }
 
-    public override double CalcArea()
-    {
-        return length * width;
-    }
+    public override double CalcArea() => Length * Width;
 }
