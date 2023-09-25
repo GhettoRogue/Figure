@@ -2,9 +2,14 @@
 
 public class Rectangle : Figure
 {
-    public double Length { get; init; }
-    public double Width { get; init; }
+    private double Length { get; init; }
+    private double Width { get; init; }
 
+    public Rectangle(double length, double width)
+    {
+        Length = length;
+        Width = width;
+    }
 
     public override double CalcArea() => Length * Width;
 }
