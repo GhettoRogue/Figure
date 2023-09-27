@@ -1,4 +1,6 @@
-﻿using Figure.app;
+﻿using System.Globalization;
+using Figure.app;
+using ConsoleLibrary;
 
 /*var circle = new Circle { Radius = 20.5 };
 Console.WriteLine(circle.CalcArea());
@@ -10,11 +12,13 @@ var rectangle = new Rectangle { Length = 10.5, Width = 10.5 };
 Console.WriteLine(rectangle.CalcArea());*/
 
 var circle = new Circle(10);
-Console.WriteLine(Geometry.GetArea(circle));
+ConsoleHelper.PrintSuccess($"Площадь круга: {Geometry.GetArea(circle).ToString(CultureInfo.InvariantCulture)}");
+
+// ConsoleHelper.PrintSuccess(Geometry.GetArea(circle).ToString(CultureInfo.InvariantCulture));
 
 var triangle = new Triangle (5,6,7);
-Console.WriteLine(Geometry.GetArea(triangle));
+ConsoleHelper.PrintSuccess(Geometry.GetArea(triangle).ToString(CultureInfo.InvariantCulture));
 
 var rectangle = new Rectangle(10, 10);
-Console.WriteLine(Geometry.GetArea(rectangle));
+ConsoleHelper.PrintSuccess(Geometry.GetArea(rectangle).ToString(CultureInfo.InvariantCulture));
 
